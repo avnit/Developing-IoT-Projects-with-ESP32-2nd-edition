@@ -285,4 +285,21 @@ Vedat started his limited company, Mevoo Ltd, in London in 2018 to provide consu
 - [Architectural Patterns and Techniques for Developing IoT Solutions](https://www.packtpub.com/product/architectural-patterns-and-techniques-for-developing-iot-solutions/9781803245492)
 - [Terraform Cookbook – Second Edition](https://www.packtpub.com/product/terraform-cookbook-second-edition/9781804616420)
 
+<!-- ARCH-DIAGRAM:START -->
 
+## Architecture
+
+> Auto-generated architecture diagram. See [`docs/context-map.md`](docs/context-map.md) for the full context map (core application, containers/cloud, and database connections).
+
+```mermaid
+flowchart TD
+  User([User / Client])
+  App["Developing-IoT-Projects-with-ESP32-2nd-edition<br/><small>server.py</small><br/>Express / Node"]
+  SVC0["AWS"]
+  Img["Container image<br/>(Docker)"]
+  User --> App
+  App --> SVC0
+  App -.deploy.-> Img
+```
+
+<!-- ARCH-DIAGRAM:END -->
